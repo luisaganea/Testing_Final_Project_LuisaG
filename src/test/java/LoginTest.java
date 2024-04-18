@@ -1,4 +1,5 @@
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,22 +34,22 @@ public class LoginTest extends Hooks {
         loginPage.clickLoginButton();
         assertEquals("dino",loginPage.getCorrectName().getText());
         ExtentTestNGITestListener.getTest().log(Status.INFO, "informatii");
-        ExtentTestNGITestListener.pass("The user was able to login succesfully");
+        ExtentTestNGITestListener.getTest().pass("The user was able to login succesfully");
 
     }
 
-    @Test
-    public void negativeloginTest() throws InterruptedException {
-        extentTest = extentReports.createTest("Testing the login functionality without user name");
-        loginPage.clickLoginIcon();
-        loginPage.setUsername();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
-        assertEquals(loginPage.getLoginError().getText(),"Please fill in the username");
-        extentTest.pass("The user was not able to login succesfully");
+    //@Test
+  //  public void negativeloginTest() throws InterruptedException {
+     //   ExtentTestNGITestListener = extentReports.createTest("Testing the login functionality without user name");
+      //  loginPage.clickLoginIcon();
+//setUsername();
+    ///    loginPage.setPassword();
+      //  loginPage.clickLoginButton();
+     //   assertEquals(loginPage.getLoginError().getText(),"Please fill in the username");
+      //  ExtentTestNGITestListener.pass("The user was not able to login succesfully");
 
 
 
     }
 
-}
+

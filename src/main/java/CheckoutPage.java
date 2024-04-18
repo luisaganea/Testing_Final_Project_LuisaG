@@ -67,15 +67,15 @@ public class CheckoutPage extends BasePage {
         cartButton.click();
     }
 
-    @FindBy(xpath = "(//TD[@class='amount'])[1]")
-    private WebElement amount;
+    @FindBy(xpath = "(//td[@class='amount'])[1]")
+    private WebElement itemPrice;
 
-    public WebElement getItemsTotal() {
-        return itemsTotal;
-    }
+//public WebElement getItemsTotal() {
+//return itemsTotal;
+  //  }
 
     public double productPrice() {
-        String amountValue = itemsTotal.getText();
+        String amountValue = itemPrice.getText();
         String cleanAmountValue = amountValue.replace("$", "");
         return Double.parseDouble(cleanAmountValue);
 
