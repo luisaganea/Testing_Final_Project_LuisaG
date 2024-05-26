@@ -257,8 +257,8 @@ public class CheckoutTest extends Hooks {
         checkoutPage.clickSoftPizza();
         checkoutPage.clickAddToCartButton();
         checkoutPage.clickCartButton();
-        ExtentTestNGITestListener.getTest().log(Status.INFO, "The price of the product is: " + checkoutPage.priceforAwesomeProduct());
-        ExtentTestNGITestListener.getTest().log(Status.INFO, "The price of the product is: " + checkoutPage.priceforGorgeousProduct());
+        ExtentTestNGITestListener.getTest().log(Status.INFO, "The price of the awesome product is: " + checkoutPage.priceforAwesomeProduct());
+        ExtentTestNGITestListener.getTest().log(Status.INFO, "The price of the gorgeous product is: " + checkoutPage.priceforGorgeousProduct());
         double expectedTotal = checkoutPage.priceforAwesomeProduct()+checkoutPage.priceforGorgeousProduct();
         ExtentTestNGITestListener.getTest().log(Status.INFO, "The  actual total price should be " +checkoutPage.totalPrice());
         assertEquals(checkoutPage.totalPrice(), expectedTotal);
