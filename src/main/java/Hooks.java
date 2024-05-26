@@ -13,23 +13,23 @@ public class Hooks {
 
     public WebDriver driver;
 
-   //private ExtentSparkReporter extentSparkReporter;
-   //public ExtentReports extentReports;
+    //private ExtentSparkReporter extentSparkReporter;
+    //public ExtentReports extentReports;
     //public static ExtentTest extentTest;
 
     @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
 
-       // extentSparkReporter = new ExtentSparkReporter("extentReports.html");
+         // extentSparkReporter = new ExtentSparkReporter("extentReports.html");
 
         //extentReports =new ExtentReports();
 
         //extentReports.attachReporter(extentSparkReporter);
 
         //System.setProperty("webdriver.chrome.driver", "C:\\Empty Automation Solution Windows Final Project LuisaG" +
-         //       "\\Empty Automation Solution Windows Final Project LuisaG" +
-         //       "\\src\\main\\resources\\chromedriver.exe");
+        //       "\\Empty Automation Solution Windows Final Project LuisaG" +
+        //       "\\src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://fasttrackit-test.netlify.app/#/");
